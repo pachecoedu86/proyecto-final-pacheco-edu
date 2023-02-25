@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+{% for deporte in deportes %} 
+
+<p>Nombre: {{deporte.name}}</p>
+<p>Country: {{deporte.country}}</p>
+
+
+<button>    
+    <a href="{% url 'Sporteditar' deporte.name %}"> Editar Sport</a>  
+</button>
+
+
+<button>
+<a href="{% url 'Sporteliminate' deporte.name %}"> Eliminate Sport</a>
+</button>
+
+++++++++++++++++++++++++++++++++++++++
+
+{% endfor %}
+
+
+<br>
+
+<a href="{% url 'Sportscreate' %}"> Create Sport</a>
+
+
+
+
+</body>
+</html>

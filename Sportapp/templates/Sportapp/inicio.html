@@ -1,0 +1,43 @@
+{% extends "Sportapp/padre.html" %}
+
+
+{% load static %}
+
+
+
+{% block tittle %}
+
+Welcome to my firts website.
+
+{% endblock %}
+
+
+{% block subtittle %} 
+
+Let's enjoy sport.
+
+{% endblock %}
+
+
+{% block casilla %} 
+
+<form action="/Sportapp/results/" method="GET">
+
+    <input type="text" name = "name" id="name">
+    
+    <input type="submit"  value=" Search">
+    
+    
+    </form>
+
+    <p>We are looking for sport: {{name}} </p>
+
+
+{% for sport in sports %}
+
+<p>Name: {{sport.name}} ------ Country: {{sport.country}} </p>
+
+{% endfor %}
+
+
+{% endblock %} 

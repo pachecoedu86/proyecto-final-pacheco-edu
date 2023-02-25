@@ -1,0 +1,28 @@
+{% extends "Sportapp/padre.html" %}
+
+
+{% load static %}
+
+
+
+{% block tittle %}
+
+Session starts!
+
+{% endblock %}
+
+
+{% block subtittle %} 
+
+<form action="" method="POST">{% csrf_token %}
+
+
+    {{formulario.as_p}}
+
+<button type="submit"> Login</button>
+
+</form>
+
+{% endblock %}
+
+
